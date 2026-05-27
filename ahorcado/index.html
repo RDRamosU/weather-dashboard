@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ahorcado</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+    <h1 class="titulo">Ahorcado <span>con JavaScript</span></h1>
+
+    <div id="contenedor-principal" class="card">
+      <div id="botones-input" class="flex">
+        <button class="btn" id="iniciar-juego">Iniciar juego</button>
+        <input type="text" id="input-nueva-palabra" class="text-input" placeholder="Nueva palabra">
+        <button class="btn" id="nueva-palabra">Agregar</button>
+      </div>
+    </div>
+
+    <div id="contenedor-canvas" class="hidden">
+      <canvas id="canvas" width="800" height="500"></canvas>
+      <input id="input-oculto" class="input-oculto" maxlength="1" type="text">
+    </div>
+
+    <div id="botones" class="flex hidden">
+      <button id="btn-reiniciar" class="btn">Jugar otra vez</button>
+      <button id="btn-inicio" class="btn">Volver al inicio</button>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por <span>Ruben Dario Ramos Ulate</span> | &copy; 2022</p>
+  </footer>
+
+  <script src="./js/palabras.js"></script>
+  <script src="./js/canvas.js"></script>
+  <script src="./js/juego.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

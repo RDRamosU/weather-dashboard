@@ -1,0 +1,162 @@
+ /* Variables*/
+ :root {
+     --azul: #0A3871;
+     --celeste: #0097a7;
+     --gris: #E5E5E5;
+     --blanco: #ffffff;
+     --error: #f8d7da;
+     --exito: #cff4fc;
+ }
+
+ /* Reset + base*/
+ html {
+     font-size: 62.5%;
+     box-sizing: border-box;
+ }
+
+ *,
+ *::before,
+ *::after {
+     box-sizing: inherit;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     font-family: 'Krub', sans-serif;
+     background: var(--gris);
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ /* Layout */
+ .container {
+     width: 90%;
+     max-width: 900px;
+     margin-top: 2rem;
+     text-align: center;
+ }
+
+ .card {
+     background: var(--blanco);
+     padding: 2rem;
+     border-radius: 1rem;
+     margin-top: 2rem;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .flex {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     flex-wrap: wrap;
+ }
+
+ .hidden {
+     display: none;
+ }
+
+ /* textos */
+ .titulo {
+     font-size: 3.5rem;
+     color: var(--azul);
+     margin-bottom: 1rem;
+ }
+
+ .titulo span {
+     color: var(--azul);
+     font-weight: bold;
+ }
+
+ .footer {
+     margin-top: 2rem;
+     font-size: 1.4rem;
+     color: var(--azul);
+ }
+
+ .footer span {
+     font-weight: bold;
+ }
+
+ /* Botones*/
+ .btn {
+     background: var(--azul);
+     color: var(--blanco);
+     border: none;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background 0.3s;
+ }
+
+ .btn:hover {
+     background: var(--celeste);
+ }
+
+ .btn:disabled {
+     background: #d9d9d9;
+     cursor: not-allowed;
+ }
+
+ /* Inputs*/
+ .text-input {
+     padding: 0.5rem;
+     border-radius: 0.5rem;
+     border: 1px solid #ccc;
+     width: 200px;
+ }
+
+ .input-oculto {
+     position: absolute;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ /* Canvas*/
+ #canvas {
+     margin-top: 2rem;
+     border: 2px solid var(--azul);
+     width: 100%;
+     max-width: 800px;
+ }
+
+ /* Mensajes*/
+ .mensaje {
+     margin-top: 1rem;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     font-weight: bold;
+     font-size: 1.3rem;
+     text-align: center;
+     transition: opacity 0.3s ease;
+ }
+
+ .mensaje-exito {
+     background: var(--exito);
+     color: var(--azul);
+ }
+
+ .mensaje-error {
+     background: var(--error);
+     color: #842029;
+ }
+
+ /* Responsive*/
+ @media (max-width: 600px) {
+
+     .titulo {
+         font-size: 2.5rem;
+     }
+
+     .text-input {
+         width: 100%;
+     }
+
+     .flex {
+         flex-direction: column;
+     }
+
+ }
